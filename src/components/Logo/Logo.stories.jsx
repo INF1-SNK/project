@@ -13,7 +13,7 @@ export  const Default = Template.bind({});
 
 Default.args = {
     format: "large",
-    src: "../../../stories/assets/logo-pubStar.png",
+    src: "../..//stories/assets/logo-pubStar.png",
 }
 
 

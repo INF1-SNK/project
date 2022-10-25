@@ -1,6 +1,6 @@
 import React from 'react';
 import './logo.css';
-import imglOGO from '../../stories/assets/logo-pubStar.png'
+import imglOGO from '../../stories/assets/logo-pubStar.png';
 
 
 
@@ -10,7 +10,7 @@ const Logo = ({
 }) => {
 
     return (   
-        <div className={[`storybook-logo--${format}`].join(' ')}> 
+        <div className={['storybook-logo', 'storybook-logo img', `storybook-logo--${format}`].join(' ')}> 
             <img src={imglOGO} alt='lOGO' /> 
         </div>
     )
