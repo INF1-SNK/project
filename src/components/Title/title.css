@@ -1,4 +1,6 @@
 
+
+
 .small {
     font-size: 20px;
 }
@@ -9,4 +11,6 @@
     
 .large {
     font-size : 100px;
+    font-family: sans-serif !important;
+    text-align: center;
 }

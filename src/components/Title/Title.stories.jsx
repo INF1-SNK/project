@@ -13,7 +13,7 @@ export  const Default = Template.bind({});
 Default.args = {
     text: 'Title',
     size: 'small',
-    souligne: false,
+    underlined: false,
 }
 
 export const Decoration = Template.bind({});
@@ -21,7 +21,7 @@ export const Decoration = Template.bind({});
 Decoration.args = {
     text: 'Title',
     size: 'medium',
-    souligne: true,
+    underlined: true,
 
 }
 
@@ -30,5 +30,7 @@ export const LargeDecoration = Template.bind({});
 LargeDecoration.args = {
     text: 'Title',
     size: 'large',
-    souligne: true
+    underlined: true,
+    centered: true
+
 }

@@ -4,14 +4,15 @@ import './title.css'
 const Title = ({ 
     text = "Hello world",
     size = "small",
-    souligne = false
+    underlined = false,
+    centered = false
 }) => {
 
     return (
             <h2
                 className={size}
-                style={!souligne ? {textDecoration : "none" } : {textDecoration : "underline"}}
-                >
+                style={!underlined ? {textDecoration : "none" } : {textDecoration : "underline"}} 
+            >
                 {text}
             </h2>
     )
