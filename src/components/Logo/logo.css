@@ -1,0 +1,15 @@
+
+.storybook-logo--small{
+    height: 30px;
+    width: 30px;
+
+}.storybook-logo--medium{
+    height: 50px;
+    width: 50px;
+}
+
+.storybook-logo--large{
+    height: 75px;
+    width: 75px;
+    border: solid 2px red;
+}
