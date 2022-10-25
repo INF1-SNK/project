@@ -36,3 +36,10 @@
     transform: rotate(360deg);
   }
 }
+
+
+@font-face {
+  font-family: "SportsWorld-title";   /*Can be any text*/
+  src: local("SportsWorld"),
+    url("./font/Sports-World-Regular.ttf") format("truetype");
+}
