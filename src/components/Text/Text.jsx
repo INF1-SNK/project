@@ -7,7 +7,7 @@ const Text = ({
 }) => {
 
     return ( 
-            <p className={size}>{content}</p>
+            <p className={`text--${size}`}>{content}</p>
     )
 }
 export default Text;

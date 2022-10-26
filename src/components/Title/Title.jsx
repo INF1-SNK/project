@@ -10,7 +10,7 @@ const Title = ({
 
     return (
             <h2
-                className={size}
+                className={`title--${size}`}
                 style={!underlined ? {textDecoration : "none" } : {textDecoration : "underline"}} 
             >
                 {text}
