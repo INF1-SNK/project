@@ -1,16 +1,16 @@
 
 
 
-.small {
+.title--small {
     font-size: 20px;
 }
     
-.medium {
-    font-size: 50px;
+.title--medium {
+    font-size: 35px;
 }
     
-.large {
-    font-size : 100px;
+.title--large {
+    font-size : 50px;
     font-family: sans-serif !important;
     text-align: center;
 }

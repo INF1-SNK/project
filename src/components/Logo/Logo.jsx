@@ -6,7 +6,6 @@ import imglOGO from '../../stories/assets/logo-pubStar.png';
 
 const Logo = ({ 
     format = "large",
-    src = "",
 }) => {
 
     return (   
