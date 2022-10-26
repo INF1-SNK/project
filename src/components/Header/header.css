@@ -1,0 +1,24 @@
+.wrapper {
+  background-color: #991325;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 15px 20px;
+  display: flex;
+  align-items: center;
+}
+
+
+.wrapper a {
+  font-weight: 900;
+  font-size: 40px;
+  font-family: 'Broadway';
+  color: white;
+  line-height: 1;
+  margin: 6px 0 6px 10px;
+  display: inline-block;
+  vertical-align: top;
+
+}
+
+.wrapper a:hover{
+  background-color: #991325;
+}
