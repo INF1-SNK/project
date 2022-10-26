@@ -8,8 +8,7 @@ export const Header = ({}) => (
   <header>
     <div className="wrapper">
       <div>
-        <img src='public/assest/beer-logo.png'></img>
-        <h1>PUB STARS</h1>
+        <a>PUB STARS</a>
       </div>
     </div>
   </header>
