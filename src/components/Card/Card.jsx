@@ -17,7 +17,7 @@ const Card = ({
         <>
             <div className={['storybook-card', `storybook-card--${format}`, `storybook-card--${color}`].join(' ')}> 
                 <Title text={title} /> 
-                <Tag text={tag} /> 
+                <Tag className='tagCssOnCard' text={tag} /> 
                 <Description text={description} /> 
             </div>
         

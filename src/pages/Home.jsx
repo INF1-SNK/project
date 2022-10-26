@@ -6,8 +6,8 @@ const Home = () => {
     return (
         <div>
             <h1>Welcome</h1>
-            <Link to="/contactUs">Acess to list of bars </Link>
-            <button onClick={() => navigate('/contactUs')}>List of bars </button>
+            <Link to="/barPresentation">Acess to list of bars </Link>
+            <button onClick={() => navigate('/contactUs')}> Contact Us PAGE </button>
         </div>
     );
 }

@@ -1,12 +1,12 @@
 import * as React from "react";
-
+import imglOGO from '../../stories/assets/logo-pubStar.png';
 
 
 
 const Image =  ( { 
    alt="My alternative", 
    link="www.google.fr",
-   src="'../stories/assets/logo-pubStar.png'", 
+   src={imglOGO}, 
    className ="storybook-logo--small"
 }) => {
 

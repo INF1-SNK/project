@@ -10,7 +10,8 @@
 }
 
 /** Comment faire modifier ça ? **/
-.storybook-card Tag {
+
+.storybook-card .tagCssOnCard {
     position: relative;
     top: 30px;
     left: 30px;
