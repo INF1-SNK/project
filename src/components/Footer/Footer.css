@@ -3,9 +3,8 @@
   width: 100%;
   color: white;
   text-align: center;
-  
-  left: 0;
-  bottom: 0;
+  position:fixed;
+  bottom:0;
 }
 
 a:hover {
@@ -15,4 +14,5 @@ a:hover {
 a:active {
   color : white;
 }
+
 
