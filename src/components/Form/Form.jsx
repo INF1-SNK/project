@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import Text from '../Text/Text';
+import Title from '../Title/Title';
 import './Form.css'
 
 const Form = () => {
@@ -59,8 +60,7 @@ const Form = () => {
 <div className="form">
 <header className="header">
         <form onSubmit={(e) => {CheckingPassword(e)}}>
-        <Text content='NSK' size='large'></Text>
-        <h3>Formulaire de contact</h3>
+        <Title text='Contact us ?' size='medium'></Title>
 
         <Text content='Nom' size='small'></Text>
         <input type="text" value={nom} required onChange={(e)=> {EditNom(e)}} /><br/>
