@@ -1,0 +1,14 @@
+.welcome{
+    min-height: 60vh;
+    background-image: url('../../../public/assets/two-handsome-bartenders-poring-beer-at-pub.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+h1{
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

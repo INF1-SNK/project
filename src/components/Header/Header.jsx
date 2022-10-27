@@ -1,12 +1,13 @@
 import React from 'react';
 import './header.css';
 import Logo from '../Logo/Logo';
+import Link from '../Link/Link';
 
 export const Header = ({}) => (
   <header>
     <div className="wrapper">
-        <Logo></Logo>
-        <a>PUB STARS</a>
+        <Logo format='medium'></Logo>
+        <Link content='PUB STARS' url='/'></Link>
     </div>
   </header>
 );

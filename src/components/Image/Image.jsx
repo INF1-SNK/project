@@ -1,7 +1,6 @@
 import React from 'react';
 import './image.css';
 
-
 const Image =  ( { 
     alt="My alternative", 
     link="www.google.fr",

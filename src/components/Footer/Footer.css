@@ -6,6 +6,7 @@
   position: fixed;
   left: 0;
   bottom: 0;
+
 }
 
 a:hover {
@@ -19,3 +20,4 @@ a:active {
 a {
   color : white;
 }
+
