@@ -25,7 +25,7 @@ const router = createBrowserRouter([
   },
   {
     //chemin à appeller + composat page qui correspond (ne pas oublier d'import le composant)
-    path: '/barPresentation/:id',
+    path: '/listOfBar/barInformation/:id',
     element: <BarPresentation/>,
   },
   {
