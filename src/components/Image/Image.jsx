@@ -6,7 +6,7 @@ import * as React from "react";
 const Image =  ( { 
    alt="My alternative", 
    link="www.google.fr",
-   src="'../stories/assets/logo-pubStar.png'", 
+   src="../stories/assets/logo-pubStar.png", 
    className ="storybook-logo--small"
 }) => {
 
