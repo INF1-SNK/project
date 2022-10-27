@@ -8,7 +8,6 @@ import { Button } from "../components/Button/Button";
 import './style/barList.css';
 
 const ListOfBar = () => {
-    const navigate = useNavigate();
     const [bars, setBars] = useState([]);
 
 
