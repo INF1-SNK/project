@@ -5,7 +5,7 @@ import { Header } from "../components/Header/Header";
 import Navbar from "../components/Navbar/Navbar";
 import Footer from "../components/Footer/Footer";
 import { Button } from "../components/Button/Button";
-import './style/barList.css'
+import './style/barList.css';
 
 const ListOfBar = () => {
     const navigate = useNavigate();
