@@ -6,7 +6,7 @@ const Home = () => {
     return (
         <div>
             <h1>Welcome</h1>
-            <Link to="/barPresentation">Acess to list of bars </Link>
+            <Link to="/listOfBar">Acess to list of bars </Link>
             <button onClick={() => navigate('/contactUs')}> Contact Us PAGE </button>
         </div>
     );
