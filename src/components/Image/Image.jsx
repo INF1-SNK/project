@@ -1,29 +1,18 @@
-import * as React from "react";
+import React from 'react';
+import './image.css';
 import imglOGO from '../../stories/assets/logo-pubStar.png';
 
 
 
-const Image =  ( { 
-   alt="My alternative", 
-   link="www.google.fr",
-   src={imglOGO}, 
-   className ="storybook-logo--small"
+const Image = ({ 
+    format = "large",
 }) => {
 
-  return (
-    <div>
-        <a 
-        className={className}
-        link={link}
-        alt={alt}>
-          <img src={src}/>
-        </a>
-    </div>
-  )
+    return (   
+        <div className={['storybook-logo', 'storybook-logo img', `storybook-logo--${format}`].join(' ')}> 
+            <img src={imglOGO} alt='lOGO' /> 
+        </div>
+    )
 }
-
-Image.defaultProps = {
-  alt: " "
-};
 
 export default Image;
