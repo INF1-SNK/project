@@ -16,7 +16,7 @@ export  const Default = Template.bind({});
 Default.args = {
     menu:[<Link content='test1' color='black'></Link>,
     <Link content='test2' color='black'></Link>,
-    <Dropdown label='Test3' menu={[<Link content="drpdowntest"></Link>]}></Dropdown>
+    <Dropdown label='Test3' menu={[{content:'droptest1'}, {content:'droptest2'}]}></Dropdown>
             ]
 
 }

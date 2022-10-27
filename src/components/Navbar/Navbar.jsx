@@ -8,7 +8,7 @@ const Navbar = ({
     var cpt = 0;
 
     return (
-        <div className='menu'>
+        <div className='navbar-menu'>
             {menu.map(menuItem => 
                     <div className='navbar-link' key={cpt++}>
                         {menuItem}
