@@ -1,9 +1,13 @@
 import { Link, useNavigate } from "react-router-dom";
 import { useEffect, useState } from 'react';
 import Card from "../components/Card/Card";
+import { Header } from "../components/Header/Header";
+import Navbar from "../components/Navbar/Navbar";
+import Footer from "../components/Footer/Footer";
+import { Button } from "../components/Button/Button";
 
 const ListOfBar = () => {
-
+    const navigate = useNavigate();
     const [bars, setBars] = useState([]);
 
     const fetchBars = async (quantity) => {
@@ -20,18 +24,27 @@ useEffect(() => {
 
 console.log(bars);
 return (
-  <div className="App">
-    
-    <Link to='/'> Go to Home</Link>
-    
-    <div className='cardsContainer'>
-      {bars && bars.map((bar, index) =>
-            <Link to='/barPresentation'>
-            <Card key={bar.id} format = "large" color = "white" title = {bar.name} tag = {bar.country} description = "description of the bar or his adress"/>    
-            </Link>
-      )}
+  <>
+    <Header></Header>
+    <Navbar menu={[
+                <Link to="/ListOfBar">Access to list of bars </Link>,
+                <Link to="/contactUs"> Contact Us PAGE </Link>
+            ]}></Navbar>
+    <div className="App">
+      
+      
+      <Button size={"large"} onClick={() => navigate('/')} label='Home'></Button>
+      
+      <div className='cardsContainer'>
+        {bars && bars.map((bar, index) =>
+              <Link to='/barPresentation'>
+              <Card key={bar.id} format = "large" color = "white" title = {bar.name} tag = {bar.country} description = "description of the bar or his adress"/>    
+              </Link>
+        )}
+      </div>
     </div>
-  </div>
+    <Footer></Footer>
+  </>
 );
 }
 
