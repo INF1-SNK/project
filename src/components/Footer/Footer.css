@@ -7,3 +7,15 @@
   left: 0;
   bottom: 0;
 }
+
+a:hover {
+  background-color: #991325;
+}
+
+a:active {
+  color : white;
+}
+
+a {
+  color : white;
+}
