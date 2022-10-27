@@ -1,5 +1,6 @@
-import React, {useState} from 'react';
+import React, {useState ,useRef } from 'react';
 import Text from '../Text/Text';
+import emailjs from '@emailjs/browser';
 import './Form.css'
 
 const Form = () => {
@@ -41,7 +42,7 @@ const Form = () => {
         setConfPassword(e.target.value);
       }
 
-      // Verification que le champ mot de passe et confirmation mot de passe soit cohérent
+      /* Verification que le champ mot de passe et confirmation mot de passe soit cohérent
       const CheckingPassword =(e)=>{
         if(password!==confPassword)
         {
@@ -52,13 +53,29 @@ const Form = () => {
         }
         e.preventDefault();
 
-      }
+      } */
+
+
+    
+      const form = useRef();
+
+      const sendEmail = (e) => {
+        e.preventDefault();
+    
+        emailjs.sendForm('service_v2verfb', 'template_4hw0ctt', form.current, '6m1G9yVvyC5_pzFF3')
+          .then((result) => {
+              console.log(result.text);
+          }, (error) => {
+              console.log(error.text);
+          });
+      };
+
 
     return ( 
 
 <div className="form">
 <header className="header">
-        <form onSubmit={(e) => {CheckingPassword(e)}}>
+        <form ref={form} onSubmit={sendEmail}>
         <Text content='NSK' size='large'></Text>
         <h3>Formulaire de contact</h3>
 
