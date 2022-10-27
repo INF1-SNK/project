@@ -6,10 +6,7 @@ import imglOGO from '../../stories/assets/logo-pubStar.png';
 
 
 const Image =  ( { 
-   alt="My alternative", 
-   link="www.google.fr",
-   src="../stories/assets/logo-pubStar.png", 
-   className ="storybook-logo--small"
+   format='large'
 }) => {
 
     return (   
