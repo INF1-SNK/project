@@ -13,14 +13,14 @@ const Dropdown = ({
     const handleOpen = () => {
         setOpen(!open);
     };
-
+    var cpt=0;
     return (
         <div className="dropdown">
             <Button label={label} onClick={handleOpen}></Button>
         {open ? (
             <ul className="menu">
                 {menu.map(menuItem => 
-                    <li>
+                    <li key={cpt++}>
                         <Link content={menuItem.content}></Link>
                     </li>
                 )}
