@@ -1,0 +1,21 @@
+.footer--global {
+  background-color: #991325;
+  width: 100%;
+  color: white;
+  text-align: center;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+}
+
+a:hover {
+  background-color: #991325;
+}
+
+a:active {
+  color : white;
+}
+
+a {
+  color : white;
+}
