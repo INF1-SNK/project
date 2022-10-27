@@ -6,9 +6,9 @@ const ContactUs = () => {
     return (
         <div>
             <h1>Contact </h1>
-            <Link to="/Home"> Acess to list of bars </Link>
+            <Link to="/ListOfBar"> Acess to list of bars </Link>
             <br/>
-            <button onClick={() => navigate('/Home')}> List of bars </button>
+            <button onClick={() => navigate('/')}> Go Home </button>
         </div>
     );
 }

@@ -13,4 +13,5 @@ export  const Default = Template.bind({});
 
 Default.args = {
     className: "storybook-logo--small",
+    src: "../../stories/assets/logo-pubStar.png",
 }

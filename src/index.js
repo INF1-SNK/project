@@ -5,6 +5,8 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import reportWebVitals from './reportWebVitals';
 import Home from './pages/Home';
 import ContactUs from './pages/ContactUs';
+import BarPresentation from './pages/BarPresentation';
+import ListOfBar from './pages/ListOfBar';
 
 
 //On défini l'ensemble de nos routes ici :
@@ -17,14 +19,26 @@ const router = createBrowserRouter([
   },
   //Ensuite on définit l'ensemble des autres page de notre site.
   {
-    path: '/Home',
-    element: <Home/>,
+    //chemin à appeller + composat page qui correspond (ne pas oublier d'import le composant)
+    path: '/barPresentation',
+    element: <BarPresentation/>,
+  },
+  {
+    //chemin à appeller + composat page qui correspond (ne pas oublier d'import le composant)
+    path: '/barPresentation/:id',
+    element: <BarPresentation/>,
   },
   {
     path: '/ContactUs',
     element: <ContactUs/>,
   },
+  {
+    path: '/ListOfBar',
+    element: <ListOfBar/>,
+  },
 ])
+
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
