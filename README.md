@@ -5,8 +5,8 @@
 
 ### Here is the link of consumed API ⬇️
 
--   https://www.openbrewerydb.org/
-<img src="https://www.openbrewerydb.org/_app/immutable/assets/obdb-logo-bfe70fda.png" width="250" alt="odbd">
+### https://www.openbrewerydb.org/
+<img src="https://www.openbrewerydb.org/obdb-og.png" width="305" alt="odbd api">
 
 ---
 
