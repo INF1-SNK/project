@@ -5,6 +5,7 @@ import { Header } from "../components/Header/Header";
 import Navbar from "../components/Navbar/Navbar";
 import Footer from "../components/Footer/Footer";
 import { Button } from "../components/Button/Button";
+import './style/barList.css'
 
 const ListOfBar = () => {
     const navigate = useNavigate();
@@ -31,14 +32,10 @@ return (
                 <Link to="/contactUs"> Contact Us PAGE </Link>
             ]}></Navbar>
     <div className="App">
-      
-      
-      <Button size={"large"} onClick={() => navigate('/')} label='Home'></Button>
-      
       <div className='cardsContainer'>
         {bars && bars.map((bar, index) =>
               <Link to='/barPresentation'>
-              <Card key={bar.id} format = "large" color = "white" title = {bar.name} tag = {bar.country} description = "description of the bar or his adress"/>    
+              <Card key={bar.id} format = "large" color = "white" title = {bar.name} tag = {bar.country} description = {bar.street+ ", " + bar.city + (bar.state != null ? ", " + bar.state : "" )}/>    
               </Link>
         )}
       </div>
