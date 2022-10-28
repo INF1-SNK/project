@@ -1,6 +1,7 @@
-import React, {useState} from 'react';
+import React, {useState ,useRef } from 'react';
 import Text from '../Text/Text';
-import Title from '../Title/Title';
+import emailjs from '@emailjs/browser';
+
 import './Form.css'
 
 const Form = () => {
@@ -41,44 +42,45 @@ const Form = () => {
       const EditPasswordChange =(e)=>{
         setConfPassword(e.target.value);
       }
+      
+      const form = useRef();
 
-      // Verification que le champ mot de passe et confirmation mot de passe soit cohérent
-      const CheckingPassword =(e)=>{
-        if(password!==confPassword)
-        {
-          alert("Le mot de passe est incorrect ! ❌ ");
-        }
-        else{
-          alert('Formulaire de la part de ' + nom + ' ' + prenom + ', avec un age de '+ age + ' ' + 'ans' + ' ' + 'dont l\'email est ' + email + ' ' + '✅');
-        }
+      const sendEmail = (e) => {
         e.preventDefault();
+    
+        emailjs.sendForm('service_v2verfb', 'template_4hw0ctt', form.current, '6m1G9yVvyC5_pzFF3')
+          .then((result) => {
+              console.log(result.text);
+          }, (error) => {
+              console.log(error.text);
+          });
+      };
 
-      }
 
     return ( 
 
 <div className="form">
 <header className="header">
-        <form onSubmit={(e) => {CheckingPassword(e)}}>
-        <Title text='Contact us ?' size='medium'></Title>
-
+        <form ref={form} onSubmit={sendEmail}>
+        <Text content='NSK' size='large'></Text>
+        <h3>Formulaire de contact</h3>
         <Text content='Nom' size='small'></Text>
-        <input type="text" value={nom} required onChange={(e)=> {EditNom(e)}} /><br/>
+        <input type="text" value={nom} name={nom} required onChange={(e)=> {EditNom(e)}} /><br/>
 
         <Text content='Prénom' size='small'></Text>
-        <input type="text" value={prenom} required onChange={(e)=> {EditPrenom(e)}} /><br/>
+        <input type="text" value={prenom} name={prenom} required onChange={(e)=> {EditPrenom(e)}} /><br/>
 
         <Text content='Age' size='small'></Text>
-        <input type="number" value={age} required onChange={(e)=> {EditAge(e)}} /><br/>
+        <input type="number" value={age} name={age} required onChange={(e)=> {EditAge(e)}} /><br/>
 
         <Text content='Adresse email' size='small'></Text>
-        <input type="email" value={email} required onChange={(e)=> {EditEmail(e)}} /><br/>
+        <input type="email" value={email} name={email} required onChange={(e)=> {EditEmail(e)}} /><br/>
 
         <Text content='Mot de passe' size='small'></Text>
-        <input type="password" value={password} required onChange={(e)=> {EditPassword(e)}} /><br/>
+        <input type="password" value={password} name={password} required onChange={(e)=> {EditPassword(e)}} /><br/>
 
         <Text content='Confirmer le mot de passe' size='small'></Text>
-        <input type="password" value={confPassword} required onChange={(e)=> {EditPasswordChange(e)}} />
+        <input type="password" value={confPassword} name={confPassword} required onChange={(e)=> {EditPasswordChange(e)}} />
         <br/>
         <br/>
         <input type="submit" value="Submit" id='button'/>
