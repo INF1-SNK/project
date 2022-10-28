@@ -20,7 +20,7 @@ const fetchBars = async () => {
         setBars(bars);
     }
 
-    useEffect(() => { fetchBars(); }, [])
+    useEffect(() => { fetchBars(); document.title="List of the bars"; }, [])
     return (
       <>
         <Header></Header>

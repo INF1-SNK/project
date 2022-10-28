@@ -6,12 +6,14 @@ import Dropdown from "../components/Dropdown/Dropdown";
 import './style/home.css';
 import Title from "../components/Title/Title";
 import { Button } from "../components/Button/Button";
+import { useEffect } from "react";
 import Description from "../components/Description/Description";
 
 
 const Home = () => {
     const navigate = useNavigate();
-
+    useEffect(() => {document.title="Welcome !"; }, [])
+    
 
     return (
         <>

@@ -34,7 +34,7 @@ const BarPresentation = () => {
         }
     }
 
-    useEffect(() => { fetchBar(); }, [])
+    useEffect(() => { fetchBar(); document.title="Bar details";}, [])
     console.log(bar);
     return (
        <>

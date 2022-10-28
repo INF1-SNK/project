@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { useEffect } from "react";
 import { Header }  from "../components/Header/Header";
 import Navbar from "../components/Navbar/Navbar";
 import Footer from "../components/Footer/Footer";
@@ -7,6 +8,8 @@ import Dropdown from "../components/Dropdown/Dropdown";
 import "./style/contactUs.css"
 
 const ContactUs = () => {
+    useEffect(() => {document.title="Contact us"; }, [])
+    
     return (
         <>
         <div>
