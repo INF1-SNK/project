@@ -5,7 +5,7 @@ const Image =  ( {
     alt="My alternative", 
     link="www.google.fr",
     src="'../stories/assets/logo-pubStar.png'", 
-    className ="storybook-logo--small"
+    className ="storybook-image--small"
  }) => {
  
    return (
