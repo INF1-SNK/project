@@ -9,15 +9,15 @@
 
 }
 
-a:hover {
+.footer--global a:hover {
   background-color: #991325;
 }
 
-a:active {
+.footer--global a:active {
   color : white;
 }
 
-a {
+.footer--global a {
   color : white;
 }
 
