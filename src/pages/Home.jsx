@@ -9,7 +9,7 @@ import Description from "../components/Description/Description";
 
 
 const Home = () => {
-    const navigate = useNavigate;
+    const navigate = useNavigate();
 
 
     return (
@@ -29,7 +29,7 @@ const Home = () => {
             <div className="middleBody"> 
                 <div className="titleHome"> <Title text="The perfect website to find your next bar "/> </div>
                 <Description text = "You will find here a lot of bar availlable on different contries " size = "large"/>
-                <Button onClick="() => navigate('/listOfBar')" size='large' label='click here to see the list of our bars' />
+                <Button onClick={() => navigate('/ListOfBar')} size='large' label='click here to see the list of our bars' />
                 <br/>
                 <Description text = " Bla Bla Bla  " size = "medium"/>
             </div>

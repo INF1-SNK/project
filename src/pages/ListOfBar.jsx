@@ -10,7 +10,7 @@ import './style/barList.css';
 
 const ListOfBar = () => {
     const [bars, setBars] = useState([]);
-    const navigate = useNavigate;
+    const navigate = useNavigate();
 
 
 const fetchBars = async () => {
