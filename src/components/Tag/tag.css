@@ -1,0 +1,27 @@
+
+.storybook-tag{
+    font-size: 8px;
+    text-align: center;
+    margin: 1%;
+    color:white;
+    border: 1px solid;
+}
+
+.storybook-tag--small {
+    width: 20%;
+    height: 25px;
+}
+
+.storybook-tag--medium {
+    width: 15%;
+    height: 25%;
+}
+
+.storybook-tag--red {
+    background-color: crimson;
+}
+    
+.storybook-tag--blue {
+    background-color: aqua;
+}
+

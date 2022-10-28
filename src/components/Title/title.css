@@ -1,0 +1,13 @@
+.title--small {
+    font-size: 20px;
+}
+    
+.title--medium {
+    font-size: 35px;
+}
+    
+.title--large {
+    font-size : 50px;
+    font-family: sans-serif !important;
+    text-align: center;
+}

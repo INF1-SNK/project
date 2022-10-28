@@ -1,0 +1,19 @@
+
+.bodyBarInformation{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.single-bar-card{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.single-bar-card a{
+    color: black;
+
+}

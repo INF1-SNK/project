@@ -1,5 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
+import './font/Sports-World-Regular.ttf'
 
 function App() {
   return (
