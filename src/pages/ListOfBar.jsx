@@ -6,6 +6,7 @@ import Navbar from "../components/Navbar/Navbar";
 import Footer from "../components/Footer/Footer";
 import Title from "../components/Title/Title";
 import Description from "../components/Description/Description";
+import Dropdown from "../components/Dropdown/Dropdown";
 import './style/barList.css';
 
 const ListOfBar = () => {
@@ -25,10 +26,10 @@ const fetchBars = async () => {
         <Header></Header>
         
         <Navbar menu={[
-            <Link to="/ListOfBar">Access to list of bars </Link>,
-            <Link to="/contactUs"> Contact Us PAGE </Link>
-            ]}>
-        </Navbar>
+                <Dropdown label='Bars' menu={[{content:'List of bars', url:"/ListOfBar"}, {content:'A random bar', url:"/listOfBar/barInformation/" }]}></Dropdown>,
+                <Link to="/contactUs"> Contact Us PAGE </Link>
+                ]}>
+            </Navbar>
 
         <div className="App">
 

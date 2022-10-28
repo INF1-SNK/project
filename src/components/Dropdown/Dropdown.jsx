@@ -1,6 +1,7 @@
 import React from 'react';
-import { Button } from '../Button/Button';
 import Link from '../Link/Link';
+import { Button } from '../Button/Button';
+
 import './dropdown.css'
 
 const Dropdown = ({ 
@@ -21,7 +22,7 @@ const Dropdown = ({
             <ul className="menu">
                 {menu.map(menuItem => 
                     <li key={cpt++}>
-                        <Link content={menuItem.content}></Link>
+                        <Link content={menuItem.content} url={menuItem.url}></Link>
                     </li>
                 )}
             </ul>

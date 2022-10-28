@@ -2,7 +2,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { useEffect, useState } from 'react';
 import Card from "../components/Card/Card";
 import { useParams } from 'react-router-dom';
-
+import Dropdown from "../components/Dropdown/Dropdown";
 import { Header } from "../components/Header/Header";
 import Title from "../components/Title/Title";
 import Navbar from "../components/Navbar/Navbar";
@@ -19,24 +19,31 @@ const BarPresentation = () => {
     const barDescription="";
     const [bar, setBar] = useState([]);
     
-    console.log(barId);
-
-    const fetchBar = async () => {
-        const response = await fetch(`https://api.openbrewerydb.org/breweries/${barId}`);
-        const bar = await response.json();
-        setBar(bar);
+    let fetchBar
+    if (barId === undefined){ 
+        fetchBar = async () => {
+            const response = await fetch('https://api.openbrewerydb.org/breweries/random');
+            const bar = await response.json();
+            setBar(bar[0]);
+        }
+    } else {
+        fetchBar = async () => {
+            const response = await fetch(`https://api.openbrewerydb.org/breweries/${barId}`);
+            const bar = await response.json();
+            setBar(bar);
+        }
     }
 
-
     useEffect(() => { fetchBar(); }, [])
-
+    console.log(bar);
     return (
        <>
             <Header></Header>
             <Navbar menu={[
-                <Link to="/ListOfBar">Access to list of bars </Link>,
+                <Dropdown label='Bars' menu={[{content:'List of bars', url:"/ListOfBar"}, {content:'A random bar', url:"/listOfBar/barInformation/" }]}></Dropdown>,
                 <Link to="/contactUs"> Contact Us PAGE </Link>
-                ]}></Navbar>
+                ]}>
+            </Navbar>
             <div className="bodyBarInformation">
 
                 <Title className="titleBodyBarInformation" text="Information on this bar"/> 
