@@ -1,24 +1,19 @@
-.App{
+
+.bodyBarInformation{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
 }
-
-.cardsContainer{
-
+.single-bar-card{
     display: flex;
-    flex-direction:row;
     justify-content: center;
     align-items: center;
-    flex-wrap: wrap;
+    text-align: center;
 }
 
-.barCard{
-    padding: 5%;
-}
+.single-bar-card a{
+    color: black;
 
-.titleBodyBarInformation{
-    padding-top: 2%;
 }

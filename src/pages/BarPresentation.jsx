@@ -3,6 +3,12 @@ import { useEffect, useState } from 'react';
 import Card from "../components/Card/Card";
 import { useParams } from 'react-router-dom';
 
+import { Header } from "../components/Header/Header";
+import Title from "../components/Title/Title";
+import Navbar from "../components/Navbar/Navbar";
+import Footer from "../components/Footer/Footer";
+import Text from "../components/Text/Text";
+import './style/barPresentation.css'
 
 const BarPresentation = () => {
 
@@ -10,6 +16,7 @@ const BarPresentation = () => {
     const navigate = useNavigate();
     const params = useParams();
     const barId = params.id;
+    const barDescription="";
     const [bar, setBar] = useState([]);
     
     console.log(barId);
@@ -18,33 +25,32 @@ const BarPresentation = () => {
         const response = await fetch(`https://api.openbrewerydb.org/breweries/${barId}`);
         const bar = await response.json();
         setBar(bar);
-        console.log(bar)
     }
 
 
     useEffect(() => { fetchBar(); }, [])
 
-    console.log(params)
-    console.log(bar)
-
-//Il faut recuperer le bon bar et les données de celui sur lequel on a cliqué pour les mettre dans la cards 
-
     return (
-        <div>
+       <>
+            <Header></Header>
+            <Navbar menu={[
+                <Link to="/ListOfBar">Access to list of bars </Link>,
+                <Link to="/contactUs"> Contact Us PAGE </Link>
+                ]}></Navbar>
+            <div className="bodyBarInformation">
 
-            <h1>Bar presentation  </h1>
+                <Title className="titleBodyBarInformation" text="Information on this bar"/> 
 
-            <div className='cardsContainer'>
-                 <Card format = "large" color = "white" title = "{bar.name}" tag = "{bar.country}}" description = "description of the bar or his adress"/>
-            </div>
-
-            <Link to="/ListOfBar"> Acess to list of bars </Link>
-            <br/>
-            <button onClick={() => navigate('/')}> Go Home </button>
-            <br/> <br/>
-            <Card format = "large" color = "white" title = "Name of the bar" tag = "Contrie" description = "description of the bar or his adress" />
-
-        </div>
+                <div className='single-bar-card'>
+                    <Card format = "big" color = "white" title = {bar.name} tag = {bar.country} description = {"Address : " + bar.street+ ", " + bar.city + (bar.state != null ? ", " + bar.state : "")}/>
+                    <div>
+                        <Text content={"Phone number : " + bar.phone}></Text>
+                        <a href={bar.website_url}>{bar.website_url}</a>
+                    </div>
+                 </div>
+              </div>
+            <Footer></Footer>
+        </>
     );
 }
 
