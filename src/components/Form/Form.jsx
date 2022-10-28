@@ -1,6 +1,7 @@
 import React, {useState ,useRef } from 'react';
 import Text from '../Text/Text';
 import emailjs from '@emailjs/browser';
+
 import './Form.css'
 
 const Form = () => {
@@ -63,7 +64,6 @@ const Form = () => {
         <form ref={form} onSubmit={sendEmail}>
         <Text content='NSK' size='large'></Text>
         <h3>Formulaire de contact</h3>
-
         <Text content='Nom' size='small'></Text>
         <input type="text" value={nom} name={nom} required onChange={(e)=> {EditNom(e)}} /><br/>
 
