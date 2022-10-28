@@ -62,8 +62,7 @@ const Form = () => {
 <div className="form">
 <header className="header">
         <form ref={form} onSubmit={sendEmail}>
-        <Text content='NSK' size='large'></Text>
-        <h3>Formulaire de contact</h3>
+        <Text content='Authentication form' size='large'></Text>
         <Text content='Nom' size='small'></Text>
         <input type="text" value={nom} name={nom} required onChange={(e)=> {EditNom(e)}} /><br/>
 
