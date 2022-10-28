@@ -32,9 +32,9 @@ const BarPresentation = () => {
         <>
             <Header></Header>
             <Navbar menu={[ <Link to="/ListOfBar">Access to list of bars </Link>, <Link to="/contactUs"> Contact Us PAGE </Link> ]}> </Navbar>
-            <div className="">
+            <div className="bodyBarInformation">
 
-                <Title text="Informations sur ce bar " size = "medium" centered={true} />
+                <Title className="titleBodyBarInformation" text="Information on this bar"/> 
 
                 <div className='cardsContainer'>
                     <Card format = "big" color = "white" title ={bar.name} tag ={bar.country} description = {"adress :"+bar.street+", "+bar.city+" "+bar.state+"  -  tel : "+bar.phone}/>
